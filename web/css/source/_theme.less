@@ -4,12 +4,15 @@
 //  */
 
 //
-//  Blank theme overrides
+//  Fuelsafe theme overrides
 //  _____________________________________________
 
 //  Theme file should contain declarations (overrides) ONLY OF EXISTING variables
 //  Otherwise this theme won't be available for parent nesting
 //  All new variables should be placed in local theme lib or local theme files
+
+// Layout
+@layout-indent__width: 0;
 
 //  Color nesting
 @header__background-color: #000;
@@ -28,6 +31,11 @@
 @button__border: 1px solid @border-color__base;
 @button__border-radius: 0;
 
+// Typography
+@primary__color: #000;
+
+@heading__font-weight__base: bold;
+
 //  Primary button
 @button-primary__background: @fuelsafe-primary;
 @button-primary__border: 1px solid #000;
@@ -40,6 +48,15 @@
 // @navigation__color: #fff;
 @navigation__background: #000;
 @navigation-desktop__background: #000;
+
+@navigation-desktop-level0-item__color: #fff;
+@navigation-desktop-level0-item__hover__background: #fff;
+@navigation-desktop-level0-item__hover__color: @primary__color;
+@navigation-desktop-level0-item__active__color: @fuelsafe-primary;
+@navigation-desktop-level0-item__active__border-color: @fuelsafe-primary;
+
+@submenu-desktop-item__color: #000;
+@submenu-desktop-item__active__border-color: @fuelsafe-primary;
 
 //  Tabs
 // @tab-control__background-color: @page__background-color;

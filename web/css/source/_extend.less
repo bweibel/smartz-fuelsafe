@@ -1,0 +1,385 @@
+& when (@media-common = true) {
+
+  // Layout
+  html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+
+  .columns .column.main {
+    padding-bottom: 0px;
+  }
+
+  //General
+  .dark { //eventually swap this to a mixin
+    background: #000;
+    color: #fff;
+  }
+
+  .widget.block {
+    margin-bottom: 0;
+  }
+
+  // Homepage
+  .banner {
+    position: relative;
+
+    img {
+      display: block;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;      
+    }
+
+    .title {
+      text-align: center;
+      color: @fuelsafe-primary;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-shadow: 0 0 20px rgba(0,0,0,.44);
+    }
+
+    .sub-title {
+      text-align: center;
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-shadow: 0 0 20px rgba(0,0,0,.44);
+    }
+    .button {
+      text-align: center;
+    }
+
+    .phone-box {
+      z-index: 10;
+      text-align: center;
+      margin-top: 4em;
+
+      h4{
+        // background: #333;
+        // color: #fff;
+        padding: 1rem;
+        display: inline-block;
+        line-height: 30px;
+        margin: 0;
+      }
+      .phone {
+        // background: #fff;
+        // color: #000;
+        padding: 1rem;
+        display: inline-block;
+        font-size: 30px;
+        line-height: 30px;
+
+      }
+    }
+  }
+
+  // Community
+  .community {
+    background: #000;
+  }
+
+  // Category Boxes
+  .category-box {
+    background: #000;
+    .category-img,
+    .category-description{
+      margin: 0;
+    }
+
+    .category-img {
+      background-image: url(../images/indycar.jpg);
+      background-repeat: no-repeat;
+    }
+
+    .category-description{
+      background-image: url(../images/Products-Motorsports-BW.png);
+      background-size: 55%;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      color: #fff;
+      padding: 1em;
+
+      .category-title {
+        color: @fuelsafe-primary;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 34px;
+      }
+
+      
+    }
+  }
+
+  // Contact CTA
+  .contact-cta {
+    background: @fuelsafe-primary;
+    color: #000;
+    padding: 1em;
+
+    h3{
+      text-transform: uppercase;
+    }
+  }
+
+  .community {
+    padding: 1em;
+    h3 {
+      color: @fuelsafe-primary;
+      font-size: 32px;
+    }
+  }
+
+  // Category Page
+  .category-view,
+  .page-title-wrapper {
+    max-width: 60em;
+    margin: auto;
+  }
+
+  .page-products {
+    .columns  {
+      background: #000;
+  
+      .main {
+        background: #fff;
+        padding: 4rem;
+      }
+  
+      .sidebar {
+        color: #fff;
+        padding: 2em;
+  
+        .filter-title {
+          background: #777;
+          padding: 1em;
+        }
+      }
+    }
+
+    .products-grid {
+      .product-item {
+        padding: 1em!important;
+        border: 1px solid #ccc;
+      }
+    }
+  }
+
+  .category-cms{
+    .category-list {
+      margin: 2em 0;
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    
+      .category-item {
+        text-align: center;
+        flex-basis: 15em;
+        margin: 1em auto;
+        padding: 1em 2em;
+        border: 1px solid #ccc;
+      }
+
+
+    }
+
+
+  }
+  
+
+  .page-title-wrapper{
+    // margin: 2em auto;
+  }
+
+
+
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+  // Layout
+  .page-header {
+    margin-bottom: 0;
+  }
+
+  .page-main {
+    padding: 0;
+  }
+
+  // Contact CTA
+  .contact-cta {
+    text-align: center;
+    h3{
+      font-size: 32px;
+    }
+  }
+
+  .community {
+    text-align: center;
+
+  }
+
+  //Homepage
+  .banner {
+    .phone-box {
+      
+      h4{
+      }
+      
+    }
+
+  }
+
+  .category-box {
+    .category-img {
+      height: 200px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-transform: uppercase;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+
+  .header.content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .logo {
+    margin: 0;
+    padding: 1rem;
+  }
+
+  .nav-sections {
+    margin-bottom: 0;
+  }
+
+  .block-search {
+    display: none;
+  }
+
+  .banner {
+
+    .title {
+      font-size: 72px;
+    }
+
+    .sub-title {
+      font-size: 34px;
+    }
+
+    .phone-box {
+      position: absolute;
+      z-index: 10;
+      text-align: right;
+
+      bottom: 1em;
+      right: 0;
+      max-width: 20em;;
+
+      h4{
+        background: #333;
+        color: #fff;
+        font-size: 14px;
+        padding: .1rem 1rem;
+      }
+      .phone {
+        background: #fff;
+        color: #000;
+      }
+    }
+
+  }
+
+  // Category Boxes
+  .category-box {
+    min-height: 420px;
+    display: flex;
+
+    .category-img,
+    .category-description{
+      width: 50%;
+    }
+
+    .category-img {
+      background-size: cover;
+    }
+
+    .category-description{
+      padding: 2em;
+
+      .description-wrap {
+        max-width: 40em;
+        margin: auto;
+      }
+
+      .category-title {
+        font-size: 48px;
+      }
+
+    }
+  }
+  
+  .category-box:nth-child(2){
+    .category-img {
+      order: 1;
+    }
+
+    .category-description{
+      order: 0;
+    }
+  }
+
+  // Contact CTA
+  .contact-cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h3{
+      margin: 0 1em;
+      font-size: 40px;
+    }
+  }
+
+}
