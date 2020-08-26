@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+    
+    
+    <referenceContainer name="content">
+            <container name="name.of.container" label="Label text in the backend dropdown" after="-" />
+        </referenceContainer>
+    
+        <!-- <referenceBlock name="page.main.title" remove="true" /> -->
+        <!-- <move category.view.container -->
+        <move element="category.image" destination="hero.container" before="-" />
+        <move element="page.main.title" destination="category.view.container" before="-" />
+        <move element="category.cms" destination="category.view.container" after="page.main.title" />
+        <move element="category.description" destination="category.view.container" after="category.cms" />
+
+
+       <!--  <move element="category.view" destination="top.container" after="category.cms" /> -->
+        <move element="breadcrumbs" destination="content" before="-"/> 
+    </body>
+</page>

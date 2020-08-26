@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+      <referenceContainer name="columns.top">
+          <container name="hero.container" htmlTag="div"  htmlClass="hero" before="-"></container>
+          <container name="category.container" htmlTag="div"  after="category.view.container" label="Category Container"></container>
+      </referenceContainer>
+      <!-- <referenceContainer name="category.view.container">
+          <container name="category.container" htmlTag="div"  after="-" label="Category Container"></container>
+      </referenceContainer> -->
+    </body>
+</page>
