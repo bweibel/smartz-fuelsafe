@@ -21,6 +21,7 @@
         text-transform: uppercase;
         color: #000;
         border: 1px solid;
+        transition: .2s background ease-in, .2s color ease-in;
 
         &.large {
             font-size: @font-size__l;
@@ -34,14 +35,22 @@
         }
     }
 
-    .button-secondary {
-        background: black;
-        color: @fuelsafe-primary;
+    a.button,
+    a.action.primary,
+    a.button:visited,
+    a.action.primary:visited {
+        .lib-link-as-button();
+
+        &:hover {
+            background: @fuelsafe-primary;
+            color: #000;
+        }
     }
 
-    a.button,
-    a.action.primary {
-        .lib-link-as-button();
+    .button-secondary,
+    a.button-secondary {
+        background: black;
+        color: @fuelsafe-primary;
     }
 
     .action.primary {
