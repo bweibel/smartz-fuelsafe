@@ -174,14 +174,20 @@
     }
 
     .products-grid {
+      .product-items {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
       .product-item {
-        padding: 1em!important;
+        padding: 1em;
         border: 1px solid #ccc;
       }
     }
   }
 
   .category-cms{
+
     .category-list {
       margin: 2em auto;
       list-style: none;
@@ -190,6 +196,7 @@
       flex-wrap: wrap;
       justify-content: space-around;
       max-width: 120rem;  
+
       .category-item {
         text-align: center;
         flex-basis: 15em;
@@ -197,8 +204,6 @@
         padding: 1em 2em;
         border: 1px solid #ccc;
       }
-
-
     }
 
 
