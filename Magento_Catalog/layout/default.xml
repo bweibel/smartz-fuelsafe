@@ -11,7 +11,8 @@
             <container name="hero.container" htmlTag="div"  htmlClass="hero" before="-"></container>
             <container name="category.container" htmlTag="div"  after="category.view.container" label="Category Container"></container>
         </referenceContainer>
-
+        <referenceBlock name="catalog.compare.sidebar" remove="true" />
+        <referenceBlock name="wishlist_sidebar" remove="true" />
 
       <!-- <referenceContainer name="category.view.container">
           <container name="category.container" htmlTag="div"  after="-" label="Category Container"></container>
