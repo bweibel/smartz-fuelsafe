@@ -10,7 +10,6 @@
         <referenceContainer name="columns.top">
             <container name="hero.container" htmlTag="div"  htmlClass="hero" before="-"></container>
             <container name="category.container" htmlTag="div"  after="category.view.container" label="Category Container"></container>
-
         </referenceContainer>
 
 
